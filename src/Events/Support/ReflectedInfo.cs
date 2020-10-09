@@ -8,10 +8,12 @@ namespace Bolt.Addons.Community.DefinedEvents.Support
 {
     class ReflectedInfo
     {
+#if !AOT
         public static ReflectedInfo For<T>()
         {
             return For(typeof(T));
         }
+#endif
 
         public static ReflectedInfo For(Type T)
         {

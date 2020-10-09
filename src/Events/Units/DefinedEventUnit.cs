@@ -1,4 +1,4 @@
-﻿using Bolt.Addons.Community.DefinedEvents.Support;
+using Bolt.Addons.Community.DefinedEvents.Support;
 using Bolt.Addons.Community.DefinedEvents.Support.Internal;
 using Bolt.Addons.Community.Utility;
 using Ludiq;
@@ -151,15 +151,31 @@ namespace Bolt.Addons.Community.DefinedEvents.Units
             EventBus.Trigger(eventHook, new DefinedEventArgs(eventData));
         }
 
-        
 
-        public static IDisposable RegisterListener<T>(GameObject target, Action<T> onEvent) 
+#if AOT
+        public static IDisposable RegisterListener(GameObject target, Type type, Action<object> onEvent)
         {
-            var eventHook = ConstructHook(target, typeof(T));
-            Action<DefinedEventArgs> action = (x) => { onEvent((T)x.eventData); };
+            var eventHook = ConstructHook(target, type);
+            Action<DefinedEventArgs> action = (x) => {
+                if (x.eventData.GetType() == typeof(T))
+                    onEvent((T)x.eventData);
+            };
             EventBus.Register<DefinedEventArgs>(eventHook, action);
 
             return Disposable.Create(() => { EventBus.Unregister(eventHook, action); });
         }
+#else
+        public static IDisposable RegisterListener<T>(GameObject target, Action<T> onEvent) 
+        {
+            var eventHook = ConstructHook(target, typeof(T));
+            Action<DefinedEventArgs> action = (x) => {
+                if (x.eventData.GetType() == typeof(T))
+                    onEvent((T)x.eventData);
+            };
+            EventBus.Register<DefinedEventArgs>(eventHook, action);
+
+            return Disposable.Create(() => { EventBus.Unregister(eventHook, action); });
+        }
+#endif
     }
 }

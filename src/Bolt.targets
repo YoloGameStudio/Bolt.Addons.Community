@@ -2,6 +2,14 @@
   <PropertyGroup>
     <BoltVersion>1.4.7</BoltVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'ReleaseAOT'"> 
+	<DefineConstants>AOT</DefineConstants>
+    <TargetFrameworkVersionNumber>4.6</TargetFrameworkVersionNumber>
+	<TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+	<TargetFrameworkVersionString>Net46</TargetFrameworkVersionString>
+	<TargetFrameworkProfile></TargetFrameworkProfile> 
+    <OutputPath>bin\$(Configuration)</OutputPath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release4.6'"> 
     <TargetFrameworkVersionNumber>4.6</TargetFrameworkVersionNumber>
 	<TargetFrameworkVersion>v4.6</TargetFrameworkVersion>

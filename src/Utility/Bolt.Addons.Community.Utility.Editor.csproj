@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,31 +14,31 @@
   <Import Project="$(SolutionDir)\Bolt.targets" />
   <ItemGroup>
     <Reference Include="Bolt.Core.Runtime">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Bolt.Core.Runtime.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Bolt.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Flow.Runtime">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Bolt.Flow.Runtime.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Bolt.Flow.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Core.Runtime">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Ludiq.Core.Runtime.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Ludiq.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Graphs.Runtime">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Ludiq.Graphs.Runtime.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Ludiq.Graphs.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Core.Editor">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Bolt.Core.Editor.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Bolt.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.Flow.Editor">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Bolt.Flow.Editor.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Bolt.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Bolt.State.Editor">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Bolt.State.Editor.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Bolt.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Core.Editor">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Ludiq.Core.Editor.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Ludiq.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Ludiq.Graphs.Editor">
-      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\.NET$(TargetFrameworkVersionNumber)\Ludiq.Graphs.Editor.dll</HintPath>
+      <HintPath>$(SolutionDir)\..\Dependencies\\BoltBinaries\$(BoltVersion)\Ludiq.Graphs.Editor.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
